@@ -1,5 +1,7 @@
 # 📝 Noto.io
 
+site: https://noto-io.vercel.app/
+
 Este projeto é uma aplicação React simples para **gerenciamento de tarefas** e **criação de notas**. Ele permite que os usuários adicionem e removam tarefas, além de escrever notas personalizadas.
 
 ---
