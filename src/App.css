@@ -1,0 +1,307 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+  all: unset;
+}
+.card{
+  min-height: 100vh;
+  margin: 0;
+  padding:0;
+  background-color:	#f8f8f9;
+  position: relative;
+}
+.card-left{
+  position: relative;
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  color: white;
+  padding: 10px;
+  transition: .5s;
+}
+.card-left h1{
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.card-left ul{
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-left li{
+  position: relative;
+  height: 100%;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+
+.card-left li::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  bottom: -5px;
+  left: 50%;
+  border-radius: 5px;
+  transition: .2s ease-in;
+
+}
+.card-left li:hover{
+  color: #c4c4c4;
+}
+.card-left li:hover:after{
+  width: 100%;
+  left: 0;
+}
+.card-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  gap: 20px;
+}
+.title{
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.vwList{
+  margin: 0;
+  padding: 15px 0;
+  width: 70vw;
+  height: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+
+}
+.elementList{
+  width: 90%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #00000031 ;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.elementList p{
+  width: 100%;
+  height: 100%;
+  margin-left: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+
+}
+
+.elementList input{
+  display: none;
+}
+
+.elementList label::before{
+  content: '';
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.elementList input:checked + label::before{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='20' height='20' viewBox='0 0 26 26'%3E%3Cpath d='M 22.566406 4.730469 L 20.773438 3.511719 C 20.277344 3.175781 19.597656 3.304688 19.265625 3.796875 L 10.476563 16.757813 L 6.4375 12.71875 C 6.015625 12.296875 5.328125 12.296875 4.90625 12.71875 L 3.371094 14.253906 C 2.949219 14.675781 2.949219 15.363281 3.371094 15.789063 L 9.582031 22 C 9.929688 22.347656 10.476563 22.613281 10.96875 22.613281 C 11.460938 22.613281 11.957031 22.304688 12.277344 21.839844 L 22.855469 6.234375 C 23.191406 5.742188 23.0625 5.066406 22.566406 4.730469 Z'%3E%3C/path%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #4a72bb;
+}
+.trash{
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  margin-right: 20px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+.container-task{
+  width: 70vw;
+  position: relative;
+  display: grid;
+  background-color: #fff;
+  padding: 20px;
+  gap: 30px;
+  border-radius: 5px;
+}
+.container-task h1{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.container-task input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #00000049;
+
+  font-size: 15px;
+  padding: 0 10px;
+  outline: none;
+}
+.container-task button{
+  width: 100px;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  color: #003fb4;
+  font-size: 17px;
+}
+
+.cardDetalis{
+  width: 90%;
+  background: #fafafa;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.detalisTitle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 17px;
+}
+.back-button{
+  background: #e4e4e4;
+  color: #003fb4;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.container-detalis{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+}
+
+
+/*Css de Notas*/
+
+.nt-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+.title-nt{
+  font-size: 20px;
+}
+
+.card-nt{
+  width: 80%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #0000001e;
+}
+
+.card-nt input{
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+}
+
+.addNoteIcon{
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #003fb4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px ;
+  border-radius: 10px;
+}
+
+.allNotes{
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,auto));
+  justify-items: center;
+  gap: 15px;
+}
+
+
+.notes{
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  padding: 30px 30px 60px 30px;
+  background: #f1f1f1;
+  border-radius: 10px; 
+  position: relative;
+}
+.bottomNote{
+  width: calc(100% - 60px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.trashIcon{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.noteDate{
+  font-size: 12px;
+}
